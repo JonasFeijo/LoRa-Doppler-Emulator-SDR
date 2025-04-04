@@ -36,6 +36,11 @@ gr-lora_sdr/
 │   ├── modulate_impl.h
 ├── grc/
 │   ├── lora_sdr_modulate.block.yml
+├── python/
+│   ├── lora_sdr/
+│   │   ├── bindings/
+│   │   │   ├── modulate_python.cc
+│   │   │   ├── _utilities_python.cc
 ```
 
 Certifique-se de substituir corretamente os arquivos mencionados acima para garantir o funcionamento adequado da emulação do efeito Doppler na modulação LoRa.
@@ -49,5 +54,4 @@ Este projeto segue a mesma licença do repositório original [gr-lora_sdr](https
 ---
 
 Caso precise de mais ajustes, me avise!
-
 
