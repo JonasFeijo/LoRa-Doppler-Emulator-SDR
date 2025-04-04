@@ -67,9 +67,5 @@ Esse *socket server* permitirá a comunicação por meio de uma conexão socket 
 Certifique-se de substituir corretamente os arquivos mencionados acima para garantir o funcionamento adequado da emulação do efeito Doppler na modulação LoRa dentro do GNU Radio.
 
 ## Licença
-Este projeto segue a mesma licença do repositório original [gr-lora_sdr](https://github.com/tapparelj/gr-lora_sdr). Consulte o repositório original para mais detalhes.
-
----
-
-Caso precise de mais ajustes, me avise!
+Este projeto segue a mesma licença do repositório base [gr-lora_sdr](https://github.com/tapparelj/gr-lora_sdr). Consulte o repositório base para mais detalhes.
 
