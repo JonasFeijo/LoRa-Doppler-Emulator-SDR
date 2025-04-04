@@ -45,9 +45,6 @@ gr-lora_sdr/
 
 Certifique-se de substituir corretamente os arquivos mencionados acima para garantir o funcionamento adequado da emulação do efeito Doppler na modulação LoRa.
 
-## Contribuição
-Sinta-se à vontade para contribuir com melhorias para este projeto. Caso encontre problemas ou tenha sugestões, abra uma *issue* ou envie um *pull request*.
-
 ## Licença
 Este projeto segue a mesma licença do repositório original [gr-lora_sdr](https://github.com/tapparelj/gr-lora_sdr). Consulte o repositório original para mais detalhes.
 
