@@ -1,12 +1,14 @@
 # Emulador de Efeito Doppler na Modulação LoRa
 
 ## Introdução
-Este repositório contém os códigos-fonte para realizar a emulação do efeito Doppler na modulação LoRa. O sistema recebe como entrada:
+Este repositório contém os códigos-fonte para realizar a emulação do efeito Doppler na modulação LoRa dentro do software GNU Radio. O sistema recebe como entrada:
 - Payload
 - Fator de espalhamento (Spreading Factor)
 - Largura de banda (Bandwidth)
 - Doppler Shift
 - Doppler Rate
+
+Os testes foram realizados utilizando o canal TX do SDR Lime Mini.
 
 ## Passos para uso da ferramenta de emulação do efeito Doppler
 
@@ -43,7 +45,29 @@ gr-lora_sdr/
 │   │   │   ├── _utilities_python.cc
 ```
 
-Certifique-se de substituir corretamente os arquivos mencionados acima para garantir o funcionamento adequado da emulação do efeito Doppler na modulação LoRa.
+### Execução do Emulador
+Para rodar o emulador, utilize a seguinte linha de comando:
+```bash
+python lora_modulator.py --sfa 12 --bwa 125000 --dsa 31000 --dra 0
+```
+Essa linha de comando possui os seguintes parâmetros:
+- `--sfa`: Fator de espalhamento (Spreading Factor)
+- `--bwa`: Largura de banda (Bandwidth) em Hz
+- `--dsa`: Doppler Shift em Hz
+- `--dra`: Doppler Rate em Hz/s
+
+Após a execução desse comando, o módulo do emulador será iniciado e disponibilizará um *socket server* com os seguintes parâmetros de conexão:
+- Tipo: TCP Server
+- Host: 127.0.0.1
+- Porta: 5000
+- MTU: 10k
+
+Esse *socket server* permitirá a comunicação por meio de uma conexão socket para o envio de pacotes via LoRa, utilizando os parâmetros configurados.
+
+Certifique-se de substituir corretamente os arquivos mencionados acima para garantir o funcionamento adequado da emulação do efeito Doppler na modulação LoRa dentro do GNU Radio.
+
+## Contribuição
+Sinta-se à vontade para contribuir com melhorias para este projeto. Caso encontre problemas ou tenha sugestões, abra uma *issue* ou envie um *pull request*.
 
 ## Licença
 Este projeto segue a mesma licença do repositório original [gr-lora_sdr](https://github.com/tapparelj/gr-lora_sdr). Consulte o repositório original para mais detalhes.
